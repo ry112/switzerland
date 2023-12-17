@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    height:auto
+    flex-direction: row; /* Default: Horizontal arrangement for larger screens */
+}
+
+.image {
+    flex: 1;
+    background: url('bell.png') center center/cover no-repeat;
+    position: static;
+    min-height: 100%;
+}
+
+.black {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; /* Align items to the top right */
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+    position: relative;
+    min-height: 100%;
+}
+
+.main-nav {
+    margin-top: 14px; 
+    text-align: right;
+    margin-right:12px; 
+  }
+  
+  .main-nav li {
+      display: inline;
+  }
+  
+  .main-nav a {
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 22px;
+      letter-spacing: auto;
+      color: white;
+      margin-right: 56px;
+  }
+
+.main-nav a {
+    position: relative;
+  }
+  
+  .main-nav a:hover {
+    text-decoration: none; 
+  }
+  
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px; 
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; 
+  }
+  
+  .main-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+
+.text {
+    text-align: justify;
+    font-size: large;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    padding: 100px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px;
+    background: #3824CD;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically for smaller screens */
+    }
+
+    .text {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .hero-btn {
+        position: static;
+        margin-top: 20px;
+    }
+}
